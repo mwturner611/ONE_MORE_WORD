@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const mongoose = require('mongoose');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
@@ -10,6 +11,18 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+// Connect to the Mongo DB
+mongoose
+	.connect(process.env.DB_URI || 'mongodb://localhost/wordCount', {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+		createIndexes: true,
+	})
+	.then(() => console.log('connected to db...'))
+	.catch((err) => console.log(err));
+//==============================================
+require('./models/Submission');
 
 // API routes
 app.get('/', (req,res)=> {
