@@ -1,0 +1,27 @@
+{
+  "name": "one_more_word",
+  "version": "1.0.0",
+  "description": "<img alt=\"License\" src=\"https://img.shields.io/badge/-MIT License-blue\">",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwturner611/ONE_MORE_WORD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mwturner611/ONE_MORE_WORD/issues"
+  },
+  "homepage": "https://github.com/mwturner611/ONE_MORE_WORD#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}
