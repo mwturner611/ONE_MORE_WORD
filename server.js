@@ -25,9 +25,9 @@ mongoose
 require('./models/Submission');
 
 // API routes
-app.get('/', (req,res)=> {
-    res.json("Hey, your page works")
-});
+// app.get('/', (req,res)=> {
+//     res.json("Hey, your page works")
+// });
 
 require("./routes/api-routes.js")(app);
 
