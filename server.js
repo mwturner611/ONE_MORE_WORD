@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect to the Mongo DB
 mongoose
-	.connect(process.env.DB_URI || 'mongodb://localhost/wordCount', {
+	.connect("mongodb://mongo:27017/mongo-test" || 'mongodb://localhost/wordCount', {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 		createIndexes: true,
