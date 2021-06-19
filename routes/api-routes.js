@@ -33,10 +33,13 @@ module.exports = (app) => {
             })
             // return json object
             .then(() => res.json(response))
-            .catch((err) => console.log(err));
+            .catch((err) => {
+            console.log(err)
+            res.json("Please submit a JSON object with an 'id' and 'message'key fields only")}
+            );
     });
 
-    // get total count of words
+    // welcome message if someone goes to url
     app.get('/', (req,res)=> {
         res.json("Welcome to the word count!")
         });
