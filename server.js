@@ -13,9 +13,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+const dburl = "mongodb+srv://mwturner611:8tLHe7lGc6FiSAED@one-more-word.thzas.mongodb.net/one-more-word?retryWrites=true&w=majority"
 // Connect to the Mongo DB
 mongoose
-	.connect("mongodb://mongo:27017/mongo-test" || process.env.DB_URI, {
+	.connect(dburl, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 		createIndexes: true,
