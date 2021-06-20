@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect to the Mongo DB
 mongoose
-	.connect("mongodb://mongo:27017/mongo-test" || process.env.DB_URI, {
+	.connect(process.env.DB_URI, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 		createIndexes: true,
